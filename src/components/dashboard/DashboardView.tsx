@@ -1,7 +1,8 @@
+import { FC } from 'react';
 import { useTheme } from '@mui/material/styles';
 
+import { Header } from '../header';
 import dashboardImage from '../../images/heo-fun.gif';
-import { FC } from 'react';
 
 import type { DashboardViewProps } from './DashboardTypes';
 
@@ -11,6 +12,7 @@ const DashboardView: FC<DashboardViewProps> = (props) => {
 
   return (
     <div>
+      <Header />
       <img src={dashboardImage} alt="" height={300} width={400} />
       dashboard
     </div>
