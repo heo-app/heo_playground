@@ -1,10 +1,13 @@
 import { ReactElement } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import LoginView from './LoginView';
 
 const LoginController = (): ReactElement => {
+  const navigate = useNavigate();
+
   const onLoginButtonClick = (): void => {
-    console.log('login button pressed');
+    navigate('/');
   };
 
   return <LoginView onLoginButtonClick={onLoginButtonClick} />;
