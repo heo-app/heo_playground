@@ -8,12 +8,11 @@ import type { LoginViewProps } from './LoginTypes';
 const LoginView: FC<LoginViewProps> = (props) => {
   const { onLoginButtonClick } = props;
   const theme = useTheme();
-  console.log('theme: ', theme);
 
   return (
     <div>
       <div className="grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 h-screen">
-        <div style={{ background: '#ec6602' }}>
+        <div style={{ background: theme.palette.secondary.main }}>
           <div className="flex flex-col items-center xl:justify-center font-Dyna h-full pt-10">
             <img src={logo} alt="" height={300} width={400} />
             <h1 className="text-4xl pt-5">Welcome to heo app</h1>
