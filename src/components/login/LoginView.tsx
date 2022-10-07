@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { useTheme } from '@mui/material/styles';
+import GoogleIcon from '@mui/icons-material/Google';
 
 import logo from '../../images/heo-hands.gif';
 import { useStyles } from './LoginStyle';
@@ -59,10 +60,11 @@ const LoginView: FC<LoginViewProps> = (props) => {
             </button>
           </div>
 
-          <div className="h-32 mt-6">
+          <div className="h-32 mt-6 flex items-center justify-center">
             <a href="/">
-              <div className="bg-blue-700 text-white shadow-sm shadow-gray-400 px-5 py-2 mb-4">
+              <div className="bg-blue-700 text-white shadow-sm shadow-gray-400 px-5 py-2 mb-4 flex flex-row items-center justify-between full">
                 Sign with google
+                <GoogleIcon className="text-red-500	ml-3" />
               </div>
             </a>
           </div>
