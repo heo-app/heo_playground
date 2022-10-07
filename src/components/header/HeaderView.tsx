@@ -35,13 +35,7 @@ const HeaderView: FC<HeaderViewProps> = (props) => {
 
   const DesignedText = styled.h2`
     font-family: 'dyna';
-    background: linear-gradient(
-      90deg,
-      hsla(94, 100%, 70%, 1) 0%,
-      hsla(28, 65%, 70%, 1) 37%,
-      hsla(0, 0%, 100%, 1) 74%,
-      hsla(65, 100%, 93%, 1) 97%
-    );
+    background: ${theme.palette.secondary.contrastText};
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   `;

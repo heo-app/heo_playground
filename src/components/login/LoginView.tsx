@@ -1,13 +1,15 @@
+import { FC } from 'react';
 import { useTheme } from '@mui/material/styles';
 
 import logo from '../../images/heo-hands.gif';
-import { FC } from 'react';
+import { useStyles } from './LoginStyle';
 
 import type { LoginViewProps } from './LoginTypes';
 
 const LoginView: FC<LoginViewProps> = (props) => {
   const { onLoginButtonClick } = props;
   const theme = useTheme();
+  const classes = useStyles();
 
   return (
     <div>
@@ -15,7 +17,7 @@ const LoginView: FC<LoginViewProps> = (props) => {
         <div style={{ background: theme.palette.secondary.main }}>
           <div className="flex flex-col items-center xl:justify-center font-Dyna h-full pt-10">
             <img src={logo} alt="" height={300} width={400} />
-            <h1 className="text-4xl pt-5">Welcome to heo app</h1>
+            <h1 className={`text-4xl pt-5 ${classes.appNameText}`}>Welcome to heo app</h1>
             <h1 className="text-3xl">lets make a better life!</h1>
           </div>
         </div>
