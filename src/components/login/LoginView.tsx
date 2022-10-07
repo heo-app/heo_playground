@@ -3,7 +3,7 @@ import { useTheme } from '@mui/material/styles';
 import GoogleIcon from '@mui/icons-material/Google';
 
 import logo from '../../images/heo-hands.gif';
-import { useStyles } from './LoginStyle';
+import { useStyles } from './LoginStyles';
 
 import type { LoginViewProps } from './LoginTypes';
 
