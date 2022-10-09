@@ -1,3 +1,10 @@
+export interface HeaderControllerProps {
+  title: string;
+  onHamburgerButtonClick: () => void;
+  height?: number;
+}
 export interface HeaderViewProps {
-  [key: string]: unknown;
+  title: string;
+  onHamburgerButtonClick: () => void;
+  height?: number;
 }

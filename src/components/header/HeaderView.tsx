@@ -1,20 +1,18 @@
-import { useTheme } from '@mui/material/styles';
-
-import { FC } from 'react';
+import styled from 'styled-components';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import MenuIcon from '@mui/icons-material/Menu';
-import styled from 'styled-components';
+import { useTheme } from '@mui/material/styles';
 
-import { HEADER_HEIGHT } from '../../chore/constants'; //todo: make it isolate
-
+import type { FC } from 'react';
 import type { HeaderViewProps } from './HeaderTypes';
 
 const HeaderView: FC<HeaderViewProps> = (props) => {
+  const { title, height = 50, onHamburgerButtonClick } = props;
   const theme = useTheme();
 
   const HeaderContainer = styled.div`
     background: ${theme.palette.secondary.main};
-    height: ${HEADER_HEIGHT}px;
+    height: ${height}px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -47,10 +45,10 @@ const HeaderView: FC<HeaderViewProps> = (props) => {
         <SimpleText>[username]</SimpleText>
       </IconContainer>
 
-      <DesignedText>HEO APP</DesignedText>
+      <DesignedText>{title}</DesignedText>
 
       <IconContainer>
-        <MenuIcon />
+        <MenuIcon onClick={onHamburgerButtonClick} />
       </IconContainer>
     </HeaderContainer>
   );
