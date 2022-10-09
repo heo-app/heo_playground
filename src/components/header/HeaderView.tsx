@@ -5,7 +5,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import MenuIcon from '@mui/icons-material/Menu';
 import styled from 'styled-components';
 
-import { HEADER_HEIGHT } from './HeaderHelper';
+import { HEADER_HEIGHT } from '../../chore/constants'; //todo: make it isolate
 
 import type { HeaderViewProps } from './HeaderTypes';
 
