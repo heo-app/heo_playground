@@ -1,1 +1,1 @@
-export { default as AppLayout } from './appLayoutController';
+export { default as AppLayout } from './AppLayoutController';
