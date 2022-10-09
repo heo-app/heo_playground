@@ -1,7 +1,23 @@
-import { ReactElement } from 'react';
+import type { FC } from 'react';
+import type { DrawerViewProps } from './DrawerTypes';
 
-const DrawerController = (): ReactElement => {
-  return <div>drawer</div>;
+const DrawerView: FC<DrawerViewProps> = (props) => {
+  const { isDrawerOpen } = props;
+
+  return (
+    <div>
+      <p>hi im drawer {String(isDrawerOpen)} </p>
+      <p>hi im drawer {String(isDrawerOpen)} </p>
+      <p>hi im drawer {String(isDrawerOpen)} </p>
+      <p>hi im drawer {String(isDrawerOpen)} </p>
+      <p>hi im drawer {String(isDrawerOpen)} </p>
+      <p>hi im drawer {String(isDrawerOpen)} </p>
+      <p>hi im drawer {String(isDrawerOpen)} </p>
+      <p>hi im drawer {String(isDrawerOpen)} </p>
+      <p>hi im drawer {String(isDrawerOpen)} </p>
+      <p>hi im drawer {String(isDrawerOpen)} </p>
+    </div>
+  );
 };
 
-export default DrawerController;
+export default DrawerView;
