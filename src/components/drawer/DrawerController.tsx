@@ -6,6 +6,8 @@ import type { FC } from 'react';
 import type { DrawerControllerProps, ToggleDrawer } from './DrawerTypes';
 
 const DrawerController: FC<DrawerControllerProps> = forwardRef((props, forwarderRef) => {
+  const { openDrawerWidth, closeDrawerWidth } = props;
+
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   // this hook will fill forwarded ref with custom local functions
@@ -17,7 +19,13 @@ const DrawerController: FC<DrawerControllerProps> = forwardRef((props, forwarder
     setIsDrawerOpen((prevDrawerState) => !prevDrawerState);
   };
 
-  return <DrawerView isDrawerOpen={isDrawerOpen} />;
+  return (
+    <DrawerView
+      isDrawerOpen={isDrawerOpen}
+      openDrawerWidth={openDrawerWidth}
+      closeDrawerWidth={closeDrawerWidth}
+    />
+  );
 });
 
 export default DrawerController;
