@@ -7,11 +7,10 @@ import type { DashboardViewProps } from './DashboardTypes';
 
 const DashboardView: FC<DashboardViewProps> = (props) => {
   const theme = useTheme();
-  console.log('theme: ', props, theme);
 
   return (
     <div>
-      <img src={dashboardImage} alt="" height={300} width={400} />
+      {/* <img src={dashboardImage} alt="" height={300} width={400} /> */}
       dashboard
     </div>
   );

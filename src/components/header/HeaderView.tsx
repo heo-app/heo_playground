@@ -41,14 +41,14 @@ const HeaderView: FC<HeaderViewProps> = (props) => {
   return (
     <HeaderContainer>
       <IconContainer>
-        <AccountCircleIcon />
-        <SimpleText>[username]</SimpleText>
+        <MenuIcon onClick={onHamburgerButtonClick} />
       </IconContainer>
 
       <DesignedText>{title}</DesignedText>
 
       <IconContainer>
-        <MenuIcon onClick={onHamburgerButtonClick} />
+        <AccountCircleIcon />
+        <SimpleText>[username]</SimpleText>
       </IconContainer>
     </HeaderContainer>
   );
