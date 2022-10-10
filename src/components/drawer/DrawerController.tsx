@@ -15,6 +15,11 @@ const DrawerController: FC<DrawerControllerProps> = forwardRef((props, forwarder
     toggleDrawer,
   }));
 
+  /**
+   * open or close drawer
+   * @function toggleDrawer
+   * @returns {void}
+   */
   const toggleDrawer: ToggleDrawer = () => {
     setIsDrawerOpen((prevDrawerState) => !prevDrawerState);
   };
