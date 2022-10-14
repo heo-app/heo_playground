@@ -12,7 +12,6 @@ export const useStyles = makeStyles<Theme, PostStylesProps>((theme) => ({
     //   return type === 'proffer' ? theme.palette.grey['200'] : theme.palette.grey['400'];
     // },
     border: '1px solid black',
-    padding: 5,
     marginTop: 5,
     justifyContent: 'center',
     alignContent: 'center',
