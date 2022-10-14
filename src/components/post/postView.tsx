@@ -9,7 +9,7 @@ const PostView: FC<PostViewProps> = (props) => {
   const classes = useStyles({ type });
 
   return (
-    <div className={classes.container}>
+    <div className={`${classes.container} ${type === 'proffer' ? classes.profferCard : classes.demandCard}`}>
       <p> {title}</p>
       <p> {description}</p>
     </div>

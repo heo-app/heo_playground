@@ -9,5 +9,6 @@ export const useStyles = makeStyles<Theme>((theme) => ({
     width: '100%',
     height: '100%',
     flexDirection: 'column',
+    padding: 10,
   },
 }));

@@ -5,7 +5,8 @@ import type { DrawerStylesProps } from './DrawerTypes';
 
 export const useStyles = makeStyles<Theme, DrawerStylesProps>(() => ({
   openDrawerContainer: {
-    width: ({ openDrawerWidth }): number => openDrawerWidth,
+    // width: ({ openDrawerWidth }): number => openDrawerWidth, // FIXME: use dynamic width
+    width: 240, // TODO: use dynamic width
     display: 'flex',
     flexDirection: 'column',
     background: 'lightGray',
@@ -13,7 +14,8 @@ export const useStyles = makeStyles<Theme, DrawerStylesProps>(() => ({
   },
 
   closeDrawerContainer: {
-    width: ({ closeDrawerWidth }): number => closeDrawerWidth,
+    // width: ({ closeDrawerWidth }): number => closeDrawerWidth,// FIXME: use dynamic width
+    width: 40, // TODO: use dynamic width
     display: 'flex',
     flexDirection: 'column',
     background: 'gray',
