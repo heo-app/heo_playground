@@ -8,7 +8,7 @@ export const useStyles = makeStyles<Theme, PostStylesProps>((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     width: '100%',
-    // background: ({ type }): string => {
+    // background: ({ type }): string => { // fixme
     //   return type === 'proffer' ? theme.palette.grey['200'] : theme.palette.grey['400'];
     // },
     border: '1px solid black',
