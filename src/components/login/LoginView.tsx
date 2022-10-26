@@ -7,6 +7,7 @@ import logo from '../../images/heo-hands.gif';
 import { useStyles } from './LoginStyles';
 
 import type { LoginViewProps } from './LoginTypes';
+import { IconButton } from '@mui/material';
 
 const LoginView: FC<LoginViewProps> = (props) => {
   const { onLoginButtonClick } = props;
@@ -69,6 +70,11 @@ const LoginView: FC<LoginViewProps> = (props) => {
                 <GoogleIcon className="text-red-500	ml-3" />
               </div>
             </a>
+          </div>
+          <div className="flex items-center justify-center">
+            <IconButton>🇮🇷</IconButton>
+            <IconButton>🇺🇸</IconButton>
+            <IconButton>🇸🇦</IconButton>
           </div>
         </div>
       </div>
