@@ -7,4 +7,5 @@ export interface HeaderViewProps {
   title: string;
   onHamburgerButtonClick: () => void;
   height?: number;
+  onProfileIconClick: () => void;
 }

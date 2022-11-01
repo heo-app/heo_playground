@@ -7,7 +7,7 @@ import type { FC } from 'react';
 import type { HeaderViewProps } from './HeaderTypes';
 
 const HeaderView: FC<HeaderViewProps> = (props) => {
-  const { title, height = 50, onHamburgerButtonClick } = props;
+  const { title, height = 50, onHamburgerButtonClick, onProfileIconClick } = props;
   const theme = useTheme();
 
   const HeaderContainer = styled.div`
@@ -47,7 +47,7 @@ const HeaderView: FC<HeaderViewProps> = (props) => {
       <DesignedText>{title}</DesignedText>
 
       <IconContainer>
-        <AccountCircleIcon />
+        <AccountCircleIcon onClick={onProfileIconClick} />
         <SimpleText>[username]</SimpleText>
       </IconContainer>
     </HeaderContainer>
