@@ -30,4 +30,5 @@ const appLayoutController: FC<AppLayoutControllerProps> = (props) => {
 };
 
 // true in the next line will cause to always memorize this component and render it only one time
-export default memo(appLayoutController, () => true);
+// fixme: cannot navigate when change it to true
+export default memo(appLayoutController, () => false);
