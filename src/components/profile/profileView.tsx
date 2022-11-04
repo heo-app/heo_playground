@@ -10,6 +10,9 @@ const ProfileView: FC<ProfileViewProps> = () => {
   return (
     <div className={classes.container}>
       <div className={classes.contentContainer}>
+        <div className={classes.header}>
+          <img></img>
+        </div>
         <p>hi</p>
         <p>hi</p>
         <p>hi</p>
