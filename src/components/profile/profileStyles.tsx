@@ -10,5 +10,15 @@ export const useStyles = makeStyles<Theme>(() => ({
     height: '100%',
     flexDirection: 'column',
     padding: 10,
+    alignItems: 'center',
+  },
+  contentContainer: {
+    display: 'flex',
+    flex: 1,
+    width: '90%',
+    height: '90%',
+    flexDirection: 'column',
+    padding: 10,
+    border: '1px solid gray',
   },
 }));

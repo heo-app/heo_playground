@@ -9,12 +9,13 @@ const ProfileView: FC<ProfileViewProps> = () => {
 
   return (
     <div className={classes.container}>
-      <p>hi</p>
-      <p>hi</p>
-      <p>hi</p>
-      <p>hi</p>
-      <p>hi</p>
-      <p>hi</p>
+      <div className={classes.contentContainer}>
+        <p>hi</p>
+        <p>hi</p>
+        <p>hi</p>
+        <p>hi</p>
+        <p>hi</p>
+      </div>
     </div>
   );
 };
