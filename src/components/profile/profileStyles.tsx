@@ -35,4 +35,28 @@ export const useStyles = makeStyles<Theme>(() => ({
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
   },
+  editButtonContainer: {
+    display: 'flex',
+    justifyContent: 'flex-end',
+    padding: '0px 30px',
+    height: 100,
+  },
+  editIcon: {
+    color: 'white',
+  },
+  editText: {
+    color: 'white',
+    margin: '0px 10px',
+  },
+  profileInformationContainer: {
+    display: 'flex',
+    flex: 1,
+    width: '96%',
+    height: '90%',
+    flexDirection: 'column',
+    padding: 10,
+    border: '1px solid gray',
+    borderRadius: 5,
+    alignSelf: 'center',
+  },
 }));
