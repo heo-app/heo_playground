@@ -8,6 +8,8 @@ import profileImage from '../../images/Profile.png';
 
 import type { FC } from 'react';
 import type { ProfileViewProps } from './profileTypes';
+import { TextFields } from '@mui/icons-material';
+import { flexbox } from '@mui/system';
 
 const ProfileView: FC<ProfileViewProps> = () => {
   const classes = useStyles();
@@ -71,7 +73,20 @@ const ProfileView: FC<ProfileViewProps> = () => {
           </IconButton>
         </div>
 
-        <div className={classes.profileInformationContainer}></div>
+        <div className={classes.profileInformationContainer}>
+          <div style={{ display: 'flex', flex: 1, flexDirection: 'column' }}>
+            <p style={{ color: 'white' }}>field: value</p>
+            <p style={{ color: 'white' }}>field: value</p>
+            <p style={{ color: 'white' }}>field: value</p>
+            <p style={{ color: 'white' }}>field: value</p>
+          </div>
+          <div style={{ display: 'flex', flex: 1, flexDirection: 'column' }}>
+            <p style={{ color: 'white' }}>field: value</p>
+            <p style={{ color: 'white' }}>field: value</p>
+            <p style={{ color: 'white' }}>field: value</p>
+            <p style={{ color: 'white' }}>field: value</p>
+          </div>
+        </div>
       </div>
     </div>
   );
