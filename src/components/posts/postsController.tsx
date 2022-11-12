@@ -6,10 +6,57 @@ import type { PostControllerProps } from '../post/postTypes';
 
 const PostsController: FC<PostsControllerProps> = (props) => {
   const posts: PostControllerProps[] = [
-    { title: 'card one', description: 'hi', type: 'proffer' },
-    { title: 'card two', description: 'bye', type: 'demand' },
-    { title: 'card three', description: 'hi hi', type: 'proffer' },
-    { title: 'card three', description: 'bye bye', type: 'demand' },
+    {
+      title: 'type an article',
+      description: 'I need someone to type my new article ',
+      type: 'demand',
+      images: [
+        {
+          url: 'https://www.hamyarit.com/wp-content/uploads/2018/07/Touch-Typing.jpg-hamyarit.com-Touch-Typing.jpg',
+        },
+        { url: 'https://iranich.com/wp-content/uploads/2022/07/type_m85-300x300.jpg' },
+      ],
+    },
+    {
+      title: 'mechanic',
+      description: 'I can fix your car',
+      type: 'proffer',
+      images: [{ url: 'https://homeservize.com/blog1/wp-content/uploads/2020/03/car-maintenance.jpg' }],
+    },
+    {
+      title: 'type an article',
+      description: 'I need someone to type my new article ',
+      type: 'demand',
+      images: [
+        {
+          url: 'https://www.hamyarit.com/wp-content/uploads/2018/07/Touch-Typing.jpg-hamyarit.com-Touch-Typing.jpg',
+        },
+        { url: 'https://iranich.com/wp-content/uploads/2022/07/type_m85-300x300.jpg' },
+      ],
+    },
+    {
+      title: 'mechanic',
+      description: 'I can fix your car',
+      type: 'proffer',
+      images: [{ url: 'https://homeservize.com/blog1/wp-content/uploads/2020/03/car-maintenance.jpg' }],
+    },
+    {
+      title: 'type an article',
+      description: 'I need someone to type my new article ',
+      type: 'demand',
+      images: [
+        {
+          url: 'https://www.hamyarit.com/wp-content/uploads/2018/07/Touch-Typing.jpg-hamyarit.com-Touch-Typing.jpg',
+        },
+        { url: 'https://iranich.com/wp-content/uploads/2022/07/type_m85-300x300.jpg' },
+      ],
+    },
+    {
+      title: 'mechanic',
+      description: 'I can fix your car',
+      type: 'proffer',
+      images: [{ url: 'https://homeservize.com/blog1/wp-content/uploads/2020/03/car-maintenance.jpg' }],
+    },
   ];
 
   return <PostsView posts={posts} />;
