@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import LogoutIcon from '@mui/icons-material/Logout';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useTheme } from '@mui/material/styles';
 
@@ -7,7 +8,7 @@ import type { FC } from 'react';
 import type { HeaderViewProps } from './HeaderTypes';
 
 const HeaderView: FC<HeaderViewProps> = (props) => {
-  const { title, height = 50, onHamburgerButtonClick, onProfileIconClick } = props;
+  const { title, height = 50, onHamburgerButtonClick, onProfileIconClick, onLogoutClick } = props;
   const theme = useTheme();
 
   const HeaderContainer = styled.div`
@@ -49,6 +50,7 @@ const HeaderView: FC<HeaderViewProps> = (props) => {
       <IconContainer>
         <AccountCircleIcon onClick={onProfileIconClick} />
         <SimpleText>[username]</SimpleText>
+        <LogoutIcon style={{ marginLeft: 10 }} onClick={onLogoutClick} />
       </IconContainer>
     </HeaderContainer>
   );

@@ -9,10 +9,14 @@ const HeaderController: FC<HeaderControllerProps> = (props) => {
   const navigate = useNavigate();
 
   const onProfileIconClick = (): void => {
-    navigate('profile');
+    navigate('/profile', { replace: true });
   };
 
-  return <HeaderView {...props} onProfileIconClick={onProfileIconClick} />;
+  const onLogoutClick = (): void => {
+    navigate('/login', { replace: true });
+  };
+
+  return <HeaderView {...props} onProfileIconClick={onProfileIconClick} onLogoutClick={onLogoutClick} />;
 };
 
 export default HeaderController;
