@@ -8,12 +8,12 @@ export interface PostControllerProps {
   title: string;
   description: string;
   type: postType;
-  images?: Array<string>;
+  images?: Array<{ url: string }>;
 }
 
 export interface PostViewProps {
   title: string;
   description: string;
   type: postType;
-  images?: Array<string>;
+  images?: Array<{ url: string }>;
 }
