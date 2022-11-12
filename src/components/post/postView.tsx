@@ -1,4 +1,5 @@
 import type { FC } from 'react';
+import SimpleImageSlider from 'react-simple-image-slider';
 
 import { useStyles } from './postStyles';
 
@@ -34,15 +35,29 @@ const PostView: FC<PostViewProps> = (props) => {
         style={{
           marginTop: 5,
           paddingLeft: 5,
+          alignSelf: 'center',
         }}
       >
         {title}
       </h5>
 
+      {images && (
+        <SimpleImageSlider
+          width={600}
+          height={300}
+          images={images}
+          showBullets={true}
+          showNavs={true}
+          style={{ alignSelf: 'center', marginTop: 10 }}
+          autoPlay
+        />
+      )}
+
       <p
         style={{
-          marginTop: 5,
-          paddingLeft: 5,
+          marginTop: 10,
+          alignSelf: 'center',
+          paddingBottom: 10,
         }}
       >
         {description}
