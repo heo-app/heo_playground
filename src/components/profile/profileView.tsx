@@ -1,15 +1,15 @@
 import { styled } from '@mui/material/styles';
 import Badge from '@mui/material/Badge';
-import { Avatar, IconButton } from '@mui/material';
+import { Avatar, IconButton, TextField } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
 
 import { useStyles } from './profileStyles';
 import profileImage from '../../images/Profile.png';
 
 import type { FC } from 'react';
 import type { ProfileViewProps } from './profileTypes';
-import { TextFields } from '@mui/icons-material';
-import { flexbox } from '@mui/system';
 
 const ProfileView: FC<ProfileViewProps> = () => {
   const classes = useStyles();
@@ -73,20 +73,52 @@ const ProfileView: FC<ProfileViewProps> = () => {
           </IconButton>
         </div>
 
-        <div className={classes.profileInformationContainer}>
-          <div style={{ display: 'flex', flex: 1, flexDirection: 'column' }}>
-            <p style={{ color: 'white' }}>field: value</p>
-            <p style={{ color: 'white' }}>field: value</p>
-            <p style={{ color: 'white' }}>field: value</p>
-            <p style={{ color: 'white' }}>field: value</p>
-          </div>
-          <div style={{ display: 'flex', flex: 1, flexDirection: 'column' }}>
-            <p style={{ color: 'white' }}>field: value</p>
-            <p style={{ color: 'white' }}>field: value</p>
-            <p style={{ color: 'white' }}>field: value</p>
-            <p style={{ color: 'white' }}>field: value</p>
-          </div>
-        </div>
+        <Box sx={{ width: '100%' }}>
+          <form>
+            <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+              <Grid item xs={6}>
+                <TextField
+                  className={classes.textFields}
+                  id="outlined-basic"
+                  label="first name"
+                  variant="outlined"
+                />
+              </Grid>
+              <Grid item xs={6}>
+                <TextField
+                  className={classes.textFields}
+                  id="outlined-basic"
+                  label="last name"
+                  variant="outlined"
+                />
+              </Grid>
+              <Grid item xs={6}>
+                <TextField
+                  className={classes.textFields}
+                  id="outlined-basic"
+                  label="mobile number"
+                  variant="outlined"
+                />
+              </Grid>
+              <Grid item xs={6}>
+                <TextField
+                  className={classes.textFields}
+                  id="outlined-basic"
+                  label="E-mail"
+                  variant="outlined"
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  className={classes.textFields}
+                  id="outlined-basic"
+                  label="bio"
+                  variant="outlined"
+                />
+              </Grid>
+            </Grid>
+          </form>
+        </Box>
       </div>
     </div>
   );

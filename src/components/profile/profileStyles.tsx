@@ -59,4 +59,12 @@ export const useStyles = makeStyles<Theme>(() => ({
     borderRadius: 5,
     alignSelf: 'center',
   },
+  horizontalProfileInformationContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+  },
+  textFields: {
+    background: '#e3d4ac',
+    width: '100%',
+  },
 }));
