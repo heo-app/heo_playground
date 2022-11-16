@@ -1,20 +1,17 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
+import { ArTranslations } from './chore/translations/ar';
+import { EnTranslations } from './chore/translations/en';
+import { FaTranslations } from './chore/translations/fa';
+
 // the translations
 // (tip move them in a JSON file and import them,
 // or even better, manage them separated from your code: https://react.i18next.com/guides/multiple-translation-files)
 const resources = {
-  en: {
-    translation: {
-      test: 'hi',
-    },
-  },
-  fa: {
-    translation: {
-      test: 'سلام',
-    },
-  },
+  en: EnTranslations,
+  fa: FaTranslations,
+  ar: ArTranslations,
 };
 
 i18n
