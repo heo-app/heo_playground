@@ -1,6 +1,7 @@
 import { useState, forwardRef, useImperativeHandle } from 'react';
 import HomeIcon from '@mui/icons-material/Home';
 import PersonIcon from '@mui/icons-material/Person';
+import { useTranslation } from 'react-i18next';
 
 import DrawerView from './DrawerView';
 
@@ -11,6 +12,8 @@ const DrawerController: FC<DrawerControllerProps> = forwardRef((props, forwarder
   const { openDrawerWidth, closeDrawerWidth } = props;
 
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+  const { t } = useTranslation();
 
   // this hook will fill forwarded ref with custom local functions
   useImperativeHandle(forwarderRef, () => ({
@@ -28,12 +31,12 @@ const DrawerController: FC<DrawerControllerProps> = forwardRef((props, forwarder
 
   const menuItems: Array<MenuItemInterface> = [
     {
-      title: 'home',
+      title: t('menu.home'),
       icon: <HomeIcon />,
       link: '/',
     },
     {
-      title: 'profile',
+      title: t('menu.profile'),
       icon: <PersonIcon />,
       link: '/profile',
     },
