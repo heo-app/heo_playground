@@ -36,10 +36,7 @@ const PostView: FC<PostViewProps> = (props) => {
       <p className={classes.descriptionStyle}>{description}</p>
 
       <Button variant="outlined" color="success" className={classes.buttonStyle}>
-        Im interested
-      </Button>
-      <Button variant="outlined" color="success" className={classes.buttonStyle}>
-        {t('test')}
+        {t('post.interested')}
       </Button>
     </div>
   );
