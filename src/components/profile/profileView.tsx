@@ -4,6 +4,7 @@ import { Avatar, IconButton, TextField } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
+import { useTranslation } from 'react-i18next';
 
 import { useStyles } from './profileStyles';
 import profileImage from '../../images/Profile.png';
@@ -13,6 +14,7 @@ import type { ProfileViewProps } from './profileTypes';
 
 const ProfileView: FC<ProfileViewProps> = () => {
   const classes = useStyles();
+  const { t } = useTranslation();
 
   const StyledBadge = styled(Badge)(({ theme }) => ({
     '& .MuiBadge-badge': {
@@ -68,7 +70,7 @@ const ProfileView: FC<ProfileViewProps> = () => {
 
         <div className={classes.editButtonContainer}>
           <IconButton>
-            <p className={classes.editText}>Edit Profile</p>
+            <p className={classes.editText}>{t('profile.editProfile')}</p>
             <EditIcon className={classes.editIcon} />
           </IconButton>
         </div>
@@ -80,7 +82,7 @@ const ProfileView: FC<ProfileViewProps> = () => {
                 <TextField
                   className={classes.textFields}
                   id="outlined-basic"
-                  label="first name"
+                  label={t('profile.firstName')}
                   variant="outlined"
                 />
               </Grid>
@@ -88,7 +90,7 @@ const ProfileView: FC<ProfileViewProps> = () => {
                 <TextField
                   className={classes.textFields}
                   id="outlined-basic"
-                  label="last name"
+                  label={t('profile.lastName')}
                   variant="outlined"
                 />
               </Grid>
@@ -96,7 +98,7 @@ const ProfileView: FC<ProfileViewProps> = () => {
                 <TextField
                   className={classes.textFields}
                   id="outlined-basic"
-                  label="mobile number"
+                  label={t('profile.mobile')}
                   variant="outlined"
                 />
               </Grid>
@@ -104,7 +106,7 @@ const ProfileView: FC<ProfileViewProps> = () => {
                 <TextField
                   className={classes.textFields}
                   id="outlined-basic"
-                  label="E-mail"
+                  label={t('profile.email')}
                   variant="outlined"
                 />
               </Grid>
@@ -112,7 +114,7 @@ const ProfileView: FC<ProfileViewProps> = () => {
                 <TextField
                   className={classes.textFields}
                   id="outlined-basic"
-                  label="bio"
+                  label={t('profile.bio')}
                   variant="outlined"
                 />
               </Grid>
