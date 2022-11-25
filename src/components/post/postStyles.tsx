@@ -22,4 +22,32 @@ export const useStyles = makeStyles<Theme, PostStylesProps>((theme) => ({
   demandCard: {
     background: theme.palette.grey['400'],
   },
+  containerText: {
+    top: 0,
+    width: '25%',
+    height: 30,
+    background: 'orange',
+    border: '1px solid gray',
+    borderRadius: '0px 15px 50px 0px',
+  },
+  textStyle: {
+    fontFamily: 'dyna',
+    paddingLeft: 5,
+  },
+  titleStyle:{
+    marginTop: 5,
+    paddingLeft: 5,
+    alignSelf: 'center',
+  },
+  descriptionStyle:{
+    marginTop: 10,
+    alignSelf: 'center',
+    paddingBottom: 10,
+  },
+  buttonStyle:{
+    marginTop: 10,
+    alignSelf: 'center',
+    paddingBottom: 10,
+  }
+ 
 }));

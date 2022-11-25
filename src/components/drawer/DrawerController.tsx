@@ -20,7 +20,7 @@ const DrawerController: FC<DrawerControllerProps> = forwardRef((props, forwarder
    * @function toggleDrawer
    * @returns {void}
    */
-  const toggleDrawer: ToggleDrawer = () => {
+  const toggleDrawer: ToggleDrawer = (): void => {
     setIsDrawerOpen((prevDrawerState) => !prevDrawerState);
   };
 

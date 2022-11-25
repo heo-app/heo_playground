@@ -1,3 +1,4 @@
+import { Button } from '@mui/material';
 import type { FC } from 'react';
 import SimpleImageSlider from 'react-simple-image-slider';
 
@@ -11,35 +12,10 @@ const PostView: FC<PostViewProps> = (props) => {
 
   return (
     <div className={`${classes.container} ${type === 'proffer' ? classes.profferCard : classes.demandCard}`}>
-      <div
-        style={{
-          top: 0,
-          width: '25%',
-          height: 30,
-          background: 'orange',
-          border: '1px solid gray',
-          borderRadius: '0px 15px 50px 0px',
-        }}
-      >
-        <h4
-          style={{
-            fontFamily: 'dyna',
-            paddingLeft: 5,
-          }}
-        >
-          {type}
-        </h4>
+      <div className={classes.containerText}>
+        <h4 className={classes.textStyle}>{type}</h4>
       </div>
-
-      <h5
-        style={{
-          marginTop: 5,
-          paddingLeft: 5,
-          alignSelf: 'center',
-        }}
-      >
-        {title}
-      </h5>
+      <h5 className={classes.titleStyle}>{title}</h5>
 
       {images && (
         <SimpleImageSlider
@@ -49,19 +25,15 @@ const PostView: FC<PostViewProps> = (props) => {
           showBullets={true}
           showNavs={true}
           style={{ alignSelf: 'center', marginTop: 10 }}
-          autoPlay
+          // autoPlay
         />
       )}
 
-      <p
-        style={{
-          marginTop: 10,
-          alignSelf: 'center',
-          paddingBottom: 10,
-        }}
-      >
-        {description}
-      </p>
+      <p className={classes.descriptionStyle}>{description}</p>
+
+      <Button variant="outlined" color="success" className={classes.buttonStyle}>
+        Im interested
+      </Button>
     </div>
   );
 };
