@@ -34,20 +34,19 @@ export const useStyles = makeStyles<Theme, PostStylesProps>((theme) => ({
     fontFamily: 'dyna',
     paddingLeft: 5,
   },
-  titleStyle:{
+  titleStyle: {
     marginTop: 5,
     paddingLeft: 5,
     alignSelf: 'center',
   },
-  descriptionStyle:{
+  descriptionStyle: {
     marginTop: 10,
     alignSelf: 'center',
     paddingBottom: 10,
   },
-  buttonStyle:{
+  buttonStyle: {
     marginTop: 10,
     alignSelf: 'center',
     paddingBottom: 10,
-  }
- 
+  },
 }));

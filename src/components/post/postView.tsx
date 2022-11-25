@@ -1,13 +1,15 @@
 import { Button } from '@mui/material';
-import type { FC } from 'react';
 import SimpleImageSlider from 'react-simple-image-slider';
 
 import { useStyles } from './postStyles';
+
+import type { FC } from 'react';
 
 import type { PostViewProps } from './postTypes';
 
 const PostView: FC<PostViewProps> = (props) => {
   const { title, description, type, images } = props;
+
   const classes = useStyles({ type });
 
   return (
@@ -25,7 +27,7 @@ const PostView: FC<PostViewProps> = (props) => {
           showBullets={true}
           showNavs={true}
           style={{ alignSelf: 'center', marginTop: 10 }}
-          // autoPlay
+          autoPlay
         />
       )}
 
