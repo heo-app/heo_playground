@@ -1,9 +1,11 @@
 import { useState, forwardRef, useImperativeHandle } from 'react';
+import HomeIcon from '@mui/icons-material/Home';
+import PersonIcon from '@mui/icons-material/Person';
 
 import DrawerView from './DrawerView';
 
 import type { FC } from 'react';
-import type { DrawerControllerProps, ToggleDrawer } from './DrawerTypes';
+import type { DrawerControllerProps, MenuItemInterface, ToggleDrawer } from './DrawerTypes';
 
 const DrawerController: FC<DrawerControllerProps> = forwardRef((props, forwarderRef) => {
   const { openDrawerWidth, closeDrawerWidth } = props;
@@ -24,11 +26,25 @@ const DrawerController: FC<DrawerControllerProps> = forwardRef((props, forwarder
     setIsDrawerOpen((prevDrawerState) => !prevDrawerState);
   };
 
+  const menuItems: Array<MenuItemInterface> = [
+    {
+      title: 'home',
+      icon: <HomeIcon />,
+      link: '/',
+    },
+    {
+      title: 'profile',
+      icon: <PersonIcon />,
+      link: '/profile',
+    },
+  ];
+
   return (
     <DrawerView
       isDrawerOpen={isDrawerOpen}
       openDrawerWidth={openDrawerWidth}
       closeDrawerWidth={closeDrawerWidth}
+      menuItems={menuItems}
     />
   );
 });
