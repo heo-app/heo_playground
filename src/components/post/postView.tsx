@@ -1,5 +1,6 @@
 import { Button } from '@mui/material';
 import SimpleImageSlider from 'react-simple-image-slider';
+import { useTranslation } from 'react-i18next';
 
 import { useStyles } from './postStyles';
 
@@ -11,6 +12,7 @@ const PostView: FC<PostViewProps> = (props) => {
   const { title, description, type, images } = props;
 
   const classes = useStyles({ type });
+  const { t } = useTranslation();
 
   return (
     <div className={`${classes.container} ${type === 'proffer' ? classes.profferCard : classes.demandCard}`}>
@@ -35,6 +37,9 @@ const PostView: FC<PostViewProps> = (props) => {
 
       <Button variant="outlined" color="success" className={classes.buttonStyle}>
         Im interested
+      </Button>
+      <Button variant="outlined" color="success" className={classes.buttonStyle}>
+        {t('test')}
       </Button>
     </div>
   );
