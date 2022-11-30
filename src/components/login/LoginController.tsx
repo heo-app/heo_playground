@@ -4,9 +4,10 @@ import { useTranslation } from 'react-i18next';
 
 import LoginView from './LoginView';
 import { getProfile as getProfileAction } from '../profile/action';
+import { writeToLocalStorage } from 'src/chore/helpers';
+import { APP_LANGUAGE } from 'src/chore/constants';
 
 import type { MouseEvent, ReactElement } from 'react';
-import { writeToLocalStorage } from 'src/chore/helpers';
 
 const LoginController = (): ReactElement => {
   const navigate = useNavigate();
@@ -22,7 +23,7 @@ const LoginController = (): ReactElement => {
     const selectedLanguage = event.currentTarget.name;
 
     i18n.changeLanguage(selectedLanguage);
-    writeToLocalStorage('appLanguage', selectedLanguage);
+    writeToLocalStorage(APP_LANGUAGE, selectedLanguage);
   };
 
   const onLoginButtonClick = (): void => {
