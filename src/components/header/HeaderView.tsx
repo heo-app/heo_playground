@@ -3,6 +3,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import LogoutIcon from '@mui/icons-material/Logout';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useTheme } from '@mui/material/styles';
+import { useSelector } from 'react-redux';
 
 import type { FC } from 'react';
 import type { HeaderViewProps } from './HeaderTypes';
@@ -10,6 +11,22 @@ import type { HeaderViewProps } from './HeaderTypes';
 const HeaderView: FC<HeaderViewProps> = (props) => {
   const { title, height = 50, onHamburgerButtonClick, onProfileIconClick, onLogoutClick } = props;
   const theme = useTheme();
+
+  //fixme: use selector should know store type itself
+  const username = useSelector(
+    (state: {
+      profile: {
+        value: {
+          name: {
+            title: string;
+            first: string;
+            last: string;
+          };
+        };
+      };
+    }) =>
+      `${state.profile?.value?.name?.title} ${state.profile?.value?.name?.first} ${state.profile?.value?.name?.last}`,
+  );
 
   const HeaderContainer = styled.div`
     background: ${theme.palette.secondary.main};
@@ -49,7 +66,7 @@ const HeaderView: FC<HeaderViewProps> = (props) => {
 
       <IconContainer>
         <AccountCircleIcon onClick={onProfileIconClick} />
-        <SimpleText>[username]</SimpleText>
+        <SimpleText>{username}</SimpleText>
         <LogoutIcon style={{ marginLeft: 10 }} onClick={onLogoutClick} />
       </IconContainer>
     </HeaderContainer>

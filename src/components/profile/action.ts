@@ -1,8 +1,13 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-export const getProfile = createAsyncThunk('profile/getProfile', async () => {
+interface GetProfileProps {
+  successCallback?: EmptyArrowFunction;
+}
+
+export const getProfile = createAsyncThunk('profile/getProfile', async (props: GetProfileProps) => {
+  const { successCallback } = props;
   const response = await axios.get('https://randomuser.me/api');
-  console.log('response: ', response);
-  return response.data;
+  successCallback?.();
+  return response?.data?.results?.[0];
 });
