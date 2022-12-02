@@ -4,7 +4,7 @@ import type { FC } from 'react';
 import type { PostsControllerProps } from './postsTypes';
 import type { PostControllerProps } from '../post/postTypes';
 
-const PostsController: FC<PostsControllerProps> = (props) => {
+const PostsController: FC<PostsControllerProps> = () => {
   const posts: PostControllerProps[] = [
     {
       title: 'type an article',
