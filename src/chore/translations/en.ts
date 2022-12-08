@@ -17,6 +17,8 @@ export const EnTranslations = {
       forgetPassword: 'Forget PassWord',
       startNow: 'Start Now!',
       signInWithGoogle: 'Sign in with google',
+      enterUsername: 'Enter UserName',
+      enterPassword: 'Enter PassWord',
     },
     post: {
       interested: 'Im interested',

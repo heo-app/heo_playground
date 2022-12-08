@@ -46,12 +46,12 @@ const LoginView: FC<LoginViewProps> = (props) => {
             <label className="text-sm">{t('login.username')}</label>
             <input
               className="bg-white shadow-sm shadow-gray-400 text-xs p2"
-              placeholder="Enter UserName"
+              placeholder={t('login.enterUsername') as string}
             ></input>
             <label className="text-sm">{t('login.password')}</label>
             <input
               className="bg-white shadow-sm shadow-gray-400 text-xs p2"
-              placeholder="Enter PassWord"
+              placeholder={t('login.enterPassword') as string}
             ></input>
 
             <h1 className="flex justify-end text-xs text-blue-300">{t('login.forgetPassword')}</h1>

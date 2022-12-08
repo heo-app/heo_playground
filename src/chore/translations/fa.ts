@@ -17,6 +17,8 @@ export const FaTranslations = {
       forgetPassword: 'فراموشی رمز عبور',
       startNow: 'الان شروع کن!',
       signInWithGoogle: 'با گوگل وارد شوید',
+      enterUsername: 'نام کاربری را وارد کنید',
+      enterPassword: 'رمز عبور را وارد کنید',
     },
     post: {
       interested: 'علاقه مندم',

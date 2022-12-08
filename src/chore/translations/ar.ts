@@ -17,6 +17,8 @@ export const ArTranslations = {
       forgetPassword: 'نسيت كلمة المرور',
       startNow: 'ابدأ الآن!',
       signInWithGoogle: 'الدخول مع جوجل',
+      enterUsername: 'أدخل اسم المستخدم',
+      enterPassword: 'أدخل كلمة المرور',
     },
     post: {
       interested: 'انا مهتم',
