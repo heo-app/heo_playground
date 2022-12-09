@@ -6,6 +6,7 @@ import LoginView from './LoginView';
 import { getProfile as getProfileAction } from '../profile/action';
 
 import type { MouseEvent, ReactElement } from 'react';
+import { writeToLocalStorage } from 'src/chore/helpers';
 
 const LoginController = (): ReactElement => {
   const navigate = useNavigate();
@@ -18,7 +19,10 @@ const LoginController = (): ReactElement => {
   };
 
   const changeAppLanguage = (event: MouseEvent<HTMLButtonElement>): void => {
-    i18n.changeLanguage(event.currentTarget.name);
+    const selectedLanguage = event.currentTarget.name;
+
+    i18n.changeLanguage(selectedLanguage);
+    writeToLocalStorage('appLanguage', selectedLanguage);
   };
 
   const onLoginButtonClick = (): void => {
