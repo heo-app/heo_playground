@@ -11,7 +11,8 @@ interface GetProfileProps {
 export const getProfile = createAsyncThunk('profile/getProfile', async (props: GetProfileProps) => {
   const { successCallback } = props;
   const response = await axios.get('https://randomuser.me/api');
-  writeToLocalStorage(CASHED_USER, response);
+  const user = response?.data?.results?.[0];
+  writeToLocalStorage(CASHED_USER, user);
   successCallback?.();
-  return response?.data?.results?.[0];
+  return user;
 });
