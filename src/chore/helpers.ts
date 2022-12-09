@@ -26,3 +26,7 @@ export const readFromLocalStorage = <T>(key: string): T | null => {
 
   return parseJSON<T>(item) ?? null;
 };
+
+export const removeFromLocalStorage = (key: string): void => {
+  localStorage.removeItem(key);
+};
