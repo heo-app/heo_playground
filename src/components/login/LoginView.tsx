@@ -13,7 +13,7 @@ const LoginView: FC<LoginViewProps> = (props) => {
   const { onLoginButtonClick } = props;
   const theme = useTheme();
   const classes = useStyles();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return (
     <div>
@@ -72,9 +72,27 @@ const LoginView: FC<LoginViewProps> = (props) => {
             </a>
           </div>
           <div className="flex items-center justify-center">
-            <IconButton>🇮🇷</IconButton>
-            <IconButton>🇺🇸</IconButton>
-            <IconButton>🇸🇦</IconButton>
+            <IconButton
+              onClick={(): void => {
+                i18n.changeLanguage('fa');
+              }}
+            >
+              🇮🇷
+            </IconButton>
+            <IconButton
+              onClick={(): void => {
+                i18n.changeLanguage('en');
+              }}
+            >
+              🇺🇸
+            </IconButton>
+            <IconButton
+              onClick={(): void => {
+                i18n.changeLanguage('ar');
+              }}
+            >
+              🇸🇦
+            </IconButton>
           </div>
         </div>
       </div>
