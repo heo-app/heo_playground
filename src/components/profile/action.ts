@@ -10,9 +10,20 @@ interface GetProfileProps {
 
 export const getProfile = createAsyncThunk('profile/getProfile', async (props: GetProfileProps) => {
   const { successCallback } = props;
-  const response = await axios.get('https://randomuser.me/api');
-  const user = response?.data?.results?.[0];
-  writeToLocalStorage(CASHED_USER, user);
-  successCallback?.();
-  return user;
+  axios
+    .get('http://localhost:4000/getUser')
+    .then((response) => {
+      const user = response.data ?? null;
+
+      if (user) {
+        writeToLocalStorage(CASHED_USER, user);
+        successCallback?.();
+      }
+
+      return user;
+    })
+    .catch((error) => {
+      console.error('error: ', error);
+      return null;
+    });
 });

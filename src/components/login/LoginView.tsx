@@ -64,7 +64,7 @@ const LoginView: FC<LoginViewProps> = (props) => {
           </div>
 
           <div className="h-32 mt-6 flex items-center justify-center">
-            <a href="/">
+            <a>
               <div className="bg-blue-700 text-white shadow-sm shadow-gray-400 px-5 py-2 mb-4 flex flex-row items-center justify-between full">
                 {t('login.signInWithGoogle')}
                 <GoogleIcon className="text-red-500	ml-3" />

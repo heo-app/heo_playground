@@ -12,20 +12,15 @@ const HeaderView: FC<HeaderViewProps> = (props) => {
   const { title, height = 50, onHamburgerButtonClick, onProfileIconClick, onLogoutClick } = props;
   const theme = useTheme();
 
-  //fixme: use selector should know store type itself
   const username = useSelector(
     (state: {
       profile: {
         value: {
-          name: {
-            title: string;
-            first: string;
-            last: string;
-          };
+          firstName: string;
+          lastName: string;
         };
       };
-    }) =>
-      `${state.profile?.value?.name?.title} ${state.profile?.value?.name?.first} ${state.profile?.value?.name?.last}`,
+    }) => `${state.profile?.value?.firstName} ${state.profile?.value?.lastName}`,
   );
 
   const HeaderContainer = styled.div`
