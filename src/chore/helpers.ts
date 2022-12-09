@@ -1,3 +1,4 @@
+//TODO: add jsdoc
 export const parseJSON = <T>(stringifiedJson: string): T | null => {
   let parsed: T | null = null;
 
@@ -10,10 +11,12 @@ export const parseJSON = <T>(stringifiedJson: string): T | null => {
   return parsed;
 };
 
+//TODO: add jsdoc
 export const writeToLocalStorage = (key: string, value: unknown): void => {
   localStorage.setItem(key, JSON.stringify(value ?? ''));
 };
 
+//TODO: add jsdoc
 export const readFromLocalStorage = <T>(key: string): T | null => {
   const item: string | null = localStorage.getItem(key);
 
