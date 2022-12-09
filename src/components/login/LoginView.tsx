@@ -10,10 +10,10 @@ import type { LoginViewProps } from './LoginTypes';
 import { IconButton } from '@mui/material';
 
 const LoginView: FC<LoginViewProps> = (props) => {
-  const { onLoginButtonClick } = props;
+  const { onLoginButtonClick, changeAppLanguage } = props;
   const theme = useTheme();
   const classes = useStyles();
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <div>
@@ -72,25 +72,13 @@ const LoginView: FC<LoginViewProps> = (props) => {
             </a>
           </div>
           <div className="flex items-center justify-center">
-            <IconButton
-              onClick={(): void => {
-                i18n.changeLanguage('fa');
-              }}
-            >
+            <IconButton name="fa" onClick={changeAppLanguage}>
               🇮🇷
             </IconButton>
-            <IconButton
-              onClick={(): void => {
-                i18n.changeLanguage('en');
-              }}
-            >
+            <IconButton name="en" onClick={changeAppLanguage}>
               🇺🇸
             </IconButton>
-            <IconButton
-              onClick={(): void => {
-                i18n.changeLanguage('ar');
-              }}
-            >
+            <IconButton name="ar" onClick={changeAppLanguage}>
               🇸🇦
             </IconButton>
           </div>
